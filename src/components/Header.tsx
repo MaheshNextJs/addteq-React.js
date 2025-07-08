@@ -15,12 +15,17 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 dark:from-gray-800 dark:via-gray-700 dark:to-gray-900 text-white p-4 shadow-md mb-6 w-full">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <h1 className="text-xl md:text-2xl font-bold text-center w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center">
+        {/* Left Spacer */}
+        <div className="hidden md:block" />
+
+        {/* Centered Title */}
+        <h1 className="text-xl md:text-2xl font-bold text-center">
           Welcome to Mahesh Addteq Online Store
         </h1>
 
-        <div className="flex items-center justify-center md:justify-end gap-3 w-full md:w-auto">
+        {/* Right: Search + Toggle */}
+        <div className="flex justify-center md:justify-end gap-3 mt-4 md:mt-0">
           <input
             type="text"
             placeholder="Search by name or brand..."
